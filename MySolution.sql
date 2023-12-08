@@ -97,3 +97,25 @@ customername
 		when rfm_str in(433,434,443,444,144) then 'loyal '
 end as customer_seg
 from #rfm
+
+
+--what is product sold together 
+
+select distinct ordernumber, STUFF(
+(select ','+productcode
+from sales_data p
+where ORDERNUMBER in (
+	select ordernumber 
+	from(
+		select ORDERNUMBER,COUNT(*) as r
+		from sales_data
+		where STATUS = 'shipped'
+		group by ORDERNUMBER
+	)m 
+where r= 2
+)
+and p.ORDERNUMBER=s.ORDERNUMBER
+for xml path(''))
+,1,1,'') as products
+from sales_data s
+order by products desc
