@@ -89,3 +89,10 @@
 
 # Finally, we can say we classified each customer.
 
+# Then upload your work to power bi 
+# 1- Data Modeling and Transformation 
+![Screenshot 2023-12-10 012119](https://github.com/Mario-farouk/RFM_Analysis/assets/136117708/59805e20-cf90-42b0-b106-3ea844967fb3)
+# 2-Visualize your work
+![Screenshot 2023-12-10 011607](https://github.com/Mario-farouk/RFM_Analysis/assets/136117708/efdba53d-2026-4754-988d-956ca8b4235a)
+![Screenshot 2023-12-10 012620](https://github.com/Mario-farouk/RFM_Analysis/assets/136117708/edbf12c7-9519-4aa1-bd8e-a3caa9ce4dff)
+
