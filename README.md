@@ -46,7 +46,8 @@
 	<br>,NTILE(4) over(order by Frequincy) as rfm_Frequincy
 	<br>from rfm r
  # third
- -- then we cast them for classifcation 
+ -- Then we cast them for classification and created a temporary table.
+
  <br>drop table if exists #rfm 
  <br> ;with rfm as(
 		<br>select 
@@ -85,3 +86,6 @@
 		<br>when rfm_str in(433,434,443,444,144) then 'loyal '
 <br>end as customer_seg
 <br>from #rfm
+
+# Finally, we can say we classified each customer.
+
